@@ -9,12 +9,19 @@ $wisteria: #8e44ad;
 $alizarin: #e74c3c;
 $peter-river: #3498db;
 
+a {
+  text-decoration: none;
+  color: $peter-river;
+  text-transform: uppercase;
+}
 
 body {
   background: $clouds;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 button {
+  @include transition(all .5s linear);
   background: $peter-river;
   border: none;
   border-bottom: 4px solid darken($peter-river, 10%);
@@ -23,7 +30,6 @@ button {
   font-size: 1rem;
   padding: 1rem 2rem;
   position: relative;
-  transition: all 1s linear;
   
   &:after {
     background: darken($peter-river, 10%);
@@ -32,7 +38,7 @@ button {
     left: 0;
     position: absolute;
     top: -1rem;
-    transition: all 1s linear;
+    @include transition(all .5s linear);
     width: 100%;
     z-index: -1;
   }
@@ -65,7 +71,7 @@ header {
   @include animation(change-background 3s infinite linear);
   height: 100px;
   line-height: 100px;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -85,5 +91,39 @@ header {
   }
   100% {
     background: $peter-river;
+  }
+}
+
+.nav {
+  li {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 25%;
+
+    &:hover {
+      .has_children {
+        max-height: 900px;
+      }
+    }
+    a {
+      display: block;
+    }
+  }
+
+  .has_children {
+    @include transition(all 1s linear);
+    left: 0;
+    max-height: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    width: 100%;
+
+    li {
+      display: block;
+      width: 100% !important;
+    }
   }
 }
