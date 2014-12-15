@@ -1,0 +1,46 @@
+// Import Bourbon
+@import "bourbon/bourbon";
+
+// Colors
+$clouds: #ecf0f1;
+$turquoise: #1abc9c;
+$orange: #f39c12;
+$wisteria: #8e44ad;
+$alizarin: #e74c3c;
+$peter-river: #3498db;
+
+
+body {
+  // Mixin para la propiedad animation
+  @include animation(change-background 3s infinite linear);
+}
+
+h1 {
+  color: $clouds;
+  // Mixin para transition
+  @include transition(all .3s linear);
+  
+  &:hover {
+    color: #000;;
+  }
+
+}
+
+// Mixin para definir keyframes
+@include keyframes(change-background) {
+  0% {
+    background: $turquoise;;
+  }
+  25% {
+    background: $orange;
+  }
+  50% {
+    background: $wisteria;
+  }
+  75% {
+    background: $alizarin;
+  }
+  100% {
+    background: $peter-river;
+  }
+}

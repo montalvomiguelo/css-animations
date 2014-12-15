@@ -1,0 +1,69 @@
+body {
+  -webkit-animation: change-background 3s infinite linear;
+  -moz-animation: change-background 3s infinite linear;
+  animation: change-background 3s infinite linear;
+}
+
+h1 {
+  color: #ecf0f1;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+h1:hover {
+  color: #000;
+}
+
+@-webkit-keyframes change-background {
+  0% {
+    background: #1abc9c;
+  }
+  25% {
+    background: #f39c12;
+  }
+  50% {
+    background: #8e44ad;
+  }
+  75% {
+    background: #e74c3c;
+  }
+  100% {
+    background: #3498db;
+  }
+}
+@-moz-keyframes change-background {
+  0% {
+    background: #1abc9c;
+  }
+  25% {
+    background: #f39c12;
+  }
+  50% {
+    background: #8e44ad;
+  }
+  75% {
+    background: #e74c3c;
+  }
+  100% {
+    background: #3498db;
+  }
+}
+@keyframes change-background {
+  0% {
+    background: #1abc9c;
+  }
+  25% {
+    background: #f39c12;
+  }
+  50% {
+    background: #8e44ad;
+  }
+  75% {
+    background: #e74c3c;
+  }
+  100% {
+    background: #3498db;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
