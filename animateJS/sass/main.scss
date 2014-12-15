@@ -1,0 +1,29 @@
+@import "bourbon/bourbon";
+
+body {
+  height: 1400px;
+}
+.text-center {
+  text-align: center;
+}
+
+.icon-alarm {
+  width: 300px;
+  height: 300px;
+  @include animation(shake .3s infinite linear);
+}
+
+@include keyframes(shake) {
+  0% {
+    margin-left: -10px;
+  }
+  50% {
+    margin-left: 0px;
+  }
+  75% {
+    margin-right: 10px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
