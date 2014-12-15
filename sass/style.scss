@@ -11,8 +11,42 @@ $peter-river: #3498db;
 
 
 body {
-  // Mixin para la propiedad animation
-  @include animation(change-background 3s infinite linear);
+  background: $clouds;
+}
+
+button {
+  background: $peter-river;
+  border: none;
+  border-bottom: 4px solid darken($peter-river, 10%);
+  color: $clouds;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  position: relative;
+  transition: all 1s linear;
+  
+  &:after {
+    background: darken($peter-river, 10%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: -1rem;
+    transition: all 1s linear;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    border-color: lighten($peter-river, 10%);
+
+    &:after {
+      background: lighten($peter-river, 10%);
+      top: 0;
+    }
+
+  }
+
 }
 
 h1 {
@@ -24,6 +58,15 @@ h1 {
     color: #000;;
   }
 
+}
+
+header {
+  // Mixin para la propiedad animation
+  @include animation(change-background 3s infinite linear);
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 5rem;
+  text-align: center;
 }
 
 // Mixin para definir keyframes

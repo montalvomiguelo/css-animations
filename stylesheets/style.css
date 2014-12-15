@@ -1,7 +1,35 @@
 body {
-  -webkit-animation: change-background 3s infinite linear;
-  -moz-animation: change-background 3s infinite linear;
-  animation: change-background 3s infinite linear;
+  background: #ecf0f1;
+}
+
+button {
+  background: #3498db;
+  border: none;
+  border-bottom: 4px solid #217dbb;
+  color: #ecf0f1;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  position: relative;
+  transition: all 1s linear;
+}
+button:after {
+  background: #217dbb;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: -1rem;
+  transition: all 1s linear;
+  width: 100%;
+  z-index: -1;
+}
+button:hover {
+  border-color: #5faee3;
+}
+button:hover:after {
+  background: #5faee3;
+  top: 0;
 }
 
 h1 {
@@ -12,6 +40,16 @@ h1 {
 }
 h1:hover {
   color: #000;
+}
+
+header {
+  -webkit-animation: change-background 3s infinite linear;
+  -moz-animation: change-background 3s infinite linear;
+  animation: change-background 3s infinite linear;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 5rem;
+  text-align: center;
 }
 
 @-webkit-keyframes change-background {
